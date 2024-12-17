@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: white;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: black;
+            transition: color 0.5s;
+        }
+
+        @keyframes bounce {
+            0%  {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .tlacitko {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            animation: bounce 2s infinite;
+        }
+
+        .karta {
+            display: inline-block;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid gray;
+            background-color: white;
+            border-radius: 10px;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        .karta:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <h1 id="nadpis">Tohle je moje portfolio!</h1>
+
+    <div class="karta">
+        <h2>O mně</h2>
+        <p>Miluju Webové Technologie!</p>
+    </div>
+
+    <div class="karta">
+        <h2>Moje Projekty z WETů!</h2>
+        <p>Žonglování, (Za které mi stále dlužíte jedničku, díky! :D)</p>
+    </div>
+
+    <div>
+        <button class="tlacitko" onclick="changeColor()">Klikni na mě!</button>
+    </div>
+
+    <script>
+        function changeColor() {
+            document.getElementById("nadpis").style.color = 
+                document.getElementById("nadpis").style.color === "red" ? "black" : "red";
+                // nadpis.classList.toggle("classa")
+        }
+    </script>
+</body>
+</html>
